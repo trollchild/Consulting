@@ -25,3 +25,5 @@ urlpatterns = [
     path('Page', views.Page, name='Page'),
 
     ]
+
+urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

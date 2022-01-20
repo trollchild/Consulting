@@ -4,7 +4,7 @@ from django.http import HttpResponse, Http404, JsonResponse
 
 def Page(request):
     context = {}
-    return render(request, '/Test.HTML', context)
+    return render(request, 'Test.HTML', context)
 
 
 # Create your views here.
