@@ -22,7 +22,7 @@ from . import views
 from Home import views
 
 urlpatterns = [
-    path('Page', views.Page, name='Page'),
+    path('', views.Page, name='Page'),
 
     ]
 

@@ -16,22 +16,25 @@
 	<script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
 	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
 	<script src="{% static 'js/infinite.min.js' %}"></script>
+	<!-- progress bar -->
+	<link rel="stylesheet" type="text/css" href="{% static "css-circular-prog-bar.css" %}">
+
 
 </head>
 
 <body>
-				<div class="col-md-12 bg-black" >
+				<div class="col-md-12" >
 					<div class="row">
 
 						<div class="col-md-1 ml-2 mt-4">
 
 							</div>
 
-						<div class="col-md-6 mt-5 mh-100 text" >
-							<div class="col-sm-4" id="test">
-							<H5 >Consulting</H5>
+						<div class="col-md-6 mt-5 mh-100" >
+							<div class="col-sm-4">
+							<H5 class="text-white">Consulting</H5>
 
-							<H2><b>Niklas Pettersson</b></H2>
+							<H2 class="text-white"><b>Niklas Pettersson</b></H2>
 						</div>
 						</div>
 
@@ -76,13 +79,28 @@
 
 							</script>
 
-						<div class="col-md-4 mt-4 mh-100 text2">
-							<div class="row">
-							<div class="col-md-3 mt-4 about" id="about">
+							<script>
+								$(document).ready(function(){
+									$("#firsttext").fadeIn(7000);
+								});//submit
+								});//document ready
+
+							</script>
+							<script>
+								$(document).ready(function(){
+									$("#text2").fadeIn(3000);
+								});//submit
+								});//document ready
+
+							</script>
+
+						<div class="col-md-4 mt-4 mh-100">
+							<div class="row h4 text-white">
+							<div class="col-md-3 mt-4" id="about">
 							About
 							</div>
 
-							<div class="col-md-3 mt-4">
+							<div class="col-md-3 mt-4 ">
 							Projects
 							</div>
 
@@ -113,38 +131,87 @@ $(function() {
 
 					</div>
 
-			<div class="col-sm-12 mh-100 mt-3 p-4 middle">
+			<div class="col-sm-12 mh-100 mt-4 p-3 middle">
 
 				<div class="row mt-4">
 				<div class="col-sm-1">
 				</div>
-				<div class="col-sm-5 p-3 mt-5 text-white text-center h3" id="firsttext">
-				You need to aim beyond what you are capable of.
+				<div class="col-sm-5 p-3 mt-5 text-center h5 firsttext" id="firsttext">
+					<p class="h3 text-white">
+					I have passion for development and new ways of working
+				</p>
+					<br><br>
+				You need to aim beyond what you are capable of.<br>
 				<br>You must develop a complete disregard for where your abilities end.<br>
 				<br>Try to do things that you're incapable of... If you think you're incapable of running a company, make that your aim...
-				<br>Make your vision of where you want to be a reality.<br><br>Nothing is impossible.
+				<br>Make your vision of where you want to be a reality.
+				<p class="text-white mt-4">Nothing is impossible.</p>
 			</div>
-			<div class="col-sm-5 p-3 mt-5 text-white text-center h3 secondtext" id="secondtext">
-			Hello and welcome to my page!<br><br>
-			I have passion for development and new ways of working.<br><br>
-			Do you have a project where I could be of help?<br><br>
-			You can find my contact details on the right side of the page.<br>
-			<div class="hide mt-4 p-4" id="hide">
-				<h6>Back</h6>
-			</div>
-		</div>
-			<div class="col-sm-6 text-center">
+			<div class="col-sm-6 text-white">
+				<div class="row">
+					<div class="col-sm-1">
+					</div>
+				<div class="col-sm-4 ml-4 h6 contactcard text-center p-4">
+					<p class="text-center mt-2 h5">Skills</p><br>
 
-				<div class="col-sm-12 border contact text-white p-2 secondtext" id="secondtext">
-									Contact<br><br>
-									Niklas Pettersson<br>
-									E-mail: niclas.pettersson@hotmail<br>
-									Phone: +358 503087183<br>
-									Finland
+					¤ Python, Django<br><br>
+					¤ HTML, CSS, Javascript, Bootstrap<br><br>
+					¤ Visual basic<br><br>
+					¤ Procurement<br><br>
+					¤ Team work<br><br>
+					¤ Leadership<br><br>
+					<div class="col-sm-12 mt-4">
+						<a class="btn btn-dark btn-big">Contact</a>
+
+					</div>
 				</div>
+				<div class="col-sm-5 contact text-white ml-3 p-2 pic" >
+
+				</div>
+			</div>
 			</div>
 
 	</div>
+			</div>
+		<div class="col-sm-12 text-center">
+
+		</div>
+
+
+			<div class="col-sm-12 bottom mb-1" id="footer">
+
+				<div class="row" >
+					<div class="col-sm-4 mt-4 text-center">
+						<p class="text-white">Automations and programming</p>
+						<p class="test">
+							Nowadays a lot of the work that is done manually can be automated.<br>
+							People spend several hours a day in collecting data from system,<br>this is an example of a task that can be automated.
+						</p>
+						<p style="color: orange;">Read more</p>
+					</div>
+					<div class="col-sm-4 mt-4 text-center">
+						<p class="text-white">Development</p>
+						<p class="test">
+							I have high passion for development and regulary finding new ways of working.<br>
+							There might be something that has always be done in the same way,<br> what if I told you there could probably be a more effective way?
+						</p>
+						<p style="color: orange;">Read more</p>
+					</div>
+					<div class="col-sm-4 mt-4 text-center">
+						<p class="text-white">Purchasing and logistic</p>
+						<p class="test">
+						For my main work I work as a material management team leader.<br>
+						I have many years of expirience in logistic and purchasing.<br> I strive to find most cost effective desitions and I find it super intresting area because you can have a big impact on the final result in many ways.<br>
+						Please feel easy to contact me if there could be some tasks where I could be of help.
+						</p>
+						<p style="color: orange;">Read more</p>
+					</div>
+				</div>
+
+				<div class="col-sm-12 text-center" id="contact">
+					Contact information: Niklas Pettersson , Phone +358503087183, E-mail: niklas.pettersson@npetters.com , Finland<br>
+					© Npetters 2022
+				</div>
 			</div>
 
 				</div>
@@ -152,46 +219,243 @@ $(function() {
 </body>
 
 <style>
+
+#python{
+	background: url('{% static "static/python.jpg" %}') 50% 0 no-repeat fixed;
+}
+
+img {
+   object-fit: cover;
+   width: 80%;
+   height: 60%;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 5px 20px 30px 20px;
+  background: white;
+  text-align: center;
+  border-radius: 15px;
+}
+
+
+
+
+#footer
+{
+		color:#FFF;
+		border-top: 2px solid orange;
+		position: fixed;
+		padding: 0 10px 0 10px;
+		left: 0px;
+		bottom: 0px;
+		width: 100%;
+		height: 300px;
+}
+#contact
+{
+		border-top: 2px solid;
+		border-color: #92a8d1;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-	background-color: black;
+	background-image: url('{% static 'background.jpg' %}');
+	background-repeat: no-repeat;
+	background-size: cover
 
 	 }
 .test {
 	font-family: "Roboto", sans-serif;
-	color: #A3A3A3;
+	color: #FFFAFA;
+		opacity: 0.4;
 	 }
 	 .text {
 	 	font-family: "Roboto", sans-serif;
 	 	color: #A3A3A3;
 	 	 }
+#about {
+	font-family: "Roboto", sans-serif;
+	color: White;
+	border-bottom: 3px solid orange;
+}
 	 .text2 {
 	 	font-family: "Roboto", sans-serif;
-	 	color: #A3A3A3;
+		color: #A3A3A3;
+		opacity: 0.6;
 	 	 }
 	 .middle {
 	 	font-family: "Roboto", sans-serif;
-	 	background-color: black;
-		height: 700px;
+	 	background-color: #121212;
+		height: 500px;
 		color: #8A8A8A;
+		opacity: 90%;
 	 	 }
 
 .pic {
-	background: url("static/Pic.jpg") no-repeat;
+	background: url("static/python.jpg") no-repeat;
 	background-size: cover;
 
 	object-fit: cover;
 	border-radius: 5px;
+	box-shadow: 10px 10px #212529;
 }
 
 .secondtext{
 	display: none;
+	color: #8A8A8A;
+	opacity: 0.8;
 }
 .contact {
-	height: 600px;
+	height: 400px;
 	Width: 700px;
 	border-radius: 5px;
 }
 
+.contactcard {
+	background-color: #080808;
+	Width: 700px;
+	Height: 300px;
+}
+
+.bottom {
+	background-color: #080808;
+	height: 250px;
+	Width: 100%;
+	border-radius: 5px;
+	opacity: 1.0;
+}
+
+.hide {
+	 	color: White;
+}
+
+#skills {
+	background-color: white;
+	Height: 400px;
+}
+.firsttext {
+	display: none;
+	opacity: 1.0;
+}
+
+.buttons {
+	overflow: hidden;
+}
+
+.buttons > div {
+	width: calc(50% - 40px);
+	padding: 20px;
+	float: left;
+	position: fixed;
+	bottom: 0;
+	top: 0;
+}
+.buttons .dark {
+	background: #000;
+	left: 50%;
+}
+.buttons a {
+	float: left;
+	margin-right: 20px;
+  margin-bottom: 20px;
+}
+a#link {position: absolute; left: 20px; bottom: 10px; text-decoration: none; color: #555; font-weight: bold;}
+/*------------------------------------------------------*/
+/* BUTTONS */
+/*------------------------------------------------------*/
+.btn,
+input[type="submit"]{
+	cursor: pointer;
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; font-weight:400;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+
+.btn-mid {
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 14px 21px;
+    font-size: 13px;
+    line-height: 25px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; font-weight:400;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+
+.btn-big {
+    border-radius: 0px;
+    text-decoration: none;
+    padding: 18px 24px;
+    font-size: 14px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif; font-weight:400;
+    letter-spacing: 3px;
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+.btn:hover,
+input[type="submit"]:hover{
+    -webkit-transition: all .4s ease-in-out;
+       -moz-transition: all .4s ease-in-out;
+        -ms-transition: all .4s ease-in-out;
+         -o-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+}
+.btn-white{
+    border:solid 2px #fff;
+    background: transparent;
+    color: #fff !important;
+}
+.btn-white:hover{
+    border:solid 2px #fff;
+    background: #fff;
+    color: #1f1f1f !important;
+}
+
+.btn-dark,
+input[type="submit"]{
+    border:solid 2px #1f1f1f;
+    background: transparent;
+    color: #1f1f1f;
+}
+.btn-dark:hover,
+input[type="submit"]:hover,
+.btn-dark.active{
+    border:solid 2px #1f1f1f;
+    background: #1f1f1f;
+    color: #fff;
+}
+
+.btn-color{
+    background: transparent;
+}
+.btn-color:hover{
+    color: #fff;
+}
+
 </style>
+
+
 </html>
