@@ -23,6 +23,7 @@ from Home import views
 
 urlpatterns = [
     path('', views.Page, name='Page'),
+    path('Projects', views.Projects, name='Projects'),
 
     ]
 

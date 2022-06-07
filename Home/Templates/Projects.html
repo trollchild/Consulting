@@ -31,6 +31,7 @@
 
 <body id="desktop">
 				<div class="col-md-12" >
+
 					<div class="overlay" >
 	<div class='popup text-white h-2'>
 			<div class='close'>&#10006;</div><!-- close button-->
@@ -47,6 +48,7 @@
 	</div>
 
 </div>
+
 					<div class="row">
 
 						<div class="col-md-1 ml-2 mt-4">
@@ -119,11 +121,11 @@
 
 						<div class="col-md-4 mt-4 mh-100">
 							<div class="row h4 text-white">
-							<a href="/"class="col-md-3 mt-4" id="about">
+							<a href="/"class="col-md-3 mt-4 text-white" >
 							About
 						</a>
 
-							<a href="Projects" class="text-white col-md-3 mt-4 ">
+							<a href="Projects" class="text-white col-md-3 mt-4 " id="about">
 							Projects
 						</a>
 
@@ -131,7 +133,7 @@
 							Contact
 							</div>
 
-							<div class="col-md-3">
+							<div class="col-md-3 mt-4">
 								<div class="dropdown">
 			          <button onclick="myFunction()" class="dropbtn btn text-center mt-4" style="border-left: 5px solid black;">
 									English
@@ -146,72 +148,58 @@
 
 						</div>
 
-<script>
-$(function() {
 
-	$("#about").mouseover(function(){
-		$("#about").css("color", "#white");
-		}, function(){
-		$("#about").css("color", "#white");
-
-	});
-
-});
-
-</script>
 						</div>
 
 					</div>
 
-			<div class="col-sm-12 mh-100 mt-4 p-4 middle">
+			<div class="col-sm-12 mh-100 mt-4 p-1 middle">
 
-				<div class="row mt-4">
-				<div class="col-sm-1">
+<div class="row">
+
+				<div class="col-sm-3 text-white p-1 mt-3 text-center" style="height:500px;" >
+			<img src="{% static 'marketing.jpg' %}" style="">
+			<div class="col-sm-12 text-center">
+			<div class="col-sm-12">Fitmoon</div>
+			<a class="col-sm-12 mt-1"  style="color: orange;" href="https://www.fitmoon.net/login?next=/">https://www.fitmoon.net/</a><br>
+			Social media for fitness and bodybuilding
+			</div>
 				</div>
 
-				<div class="col-sm-5 p-3 mt-5 text-center h5" id="firsttext">
-					<p class="h3 text-white">
-					I have passion for development and new ways of working<br><br>
-					Currently I am working with a spot-by market.<br><br>
-				</p>
-					<br>
-				You need to aim beyond what you are capable of.<br>
-				<br>You must develop a complete disregard for where your abilities end.<br>
-				<br>Try to do things that you're incapable of... If you think you're incapable of running a company, make that your aim...
-				<br>Make your vision of where you want to be a reality.
-				<p class="text-white mt-4">Nothing is impossible.</p>
-			</div>
+					<div class="col-sm-3 text-white p-1 mt-3 text-center" style="height:500px;" >
+			<img src="{% static 'Aslin.jpg' %}" style="">
+			<div class="col-sm-12 text-center">
+			<div class="col-sm-12">Aslin</div>
+			<a class="col-sm-12 mt-1" style="color: orange;" href="https://www.fitmoon.net/login?next=/">https://aslinproject.herokuapp.com/</a><br>
+			Company Aslin - felling of wood
+		</div>
+			    </div>
 
-			<div class="col-sm-6 text-white">
-				<div class="row">
-					<div class="col-sm-1">
-					</div>
-				<div class="col-sm-4 h6 contactcard text-center p-3">
-					<p class="text-center mt-2 h5">Skills</p><br>
+					<div class="col-sm-3 text-white p-1 mt-3 text-center" style="height:500px;" >
+			<img src="{% static 'python.jpg' %}" style="">
+			<div class="col-sm-12 text-center">
+			Automations<br>
+			Automations for work
+		</div>
+			    </div>
 
-					¤ Python, Django<br><br>
-					¤ HTML, CSS, Javascript, Bootstrap<br><br>
-					¤ Visual basic<br><br>
-					¤ Procurement<br><br>
-					¤ Team work<br><br>
-					¤ Leadership<br><br>
-					<div class="col-sm-12 mt-4">
-						<a class="btn btn-dark btn-big">Contact</a>
+					<div class="col-sm-3 text-white p-1 mt-3 text-center" style="height:500px;" >
+			<img src="{% static 'Diamond.jpg' %}" style="">
+			<div class="col-sm-12 text-center">
+			Different projects for learing programming;<br>
+			Python, Django<br>
+			HTML, CSS, Javascript, Bootstrap<br>
+			Visual basic<br>
+			Procurement<br>
+			Team work<br>
+			Leadership<br>
+		</div>
+			    </div>
 
-					</div>
-				</div>
-				<div class="col-sm-5 contact text-white ml-1 p-2 pic" >
 
-				</div>
-			</div>
-			</div>
 
 	</div>
 			</div>
-		<div class="col-sm-12 text-center">
-
-		</div>
-
 
 
 
@@ -228,7 +216,7 @@ $(function() {
 								Nowadays a lot of the work that is done manually can be automated.<br><br>
 								People spend several hours a day in collecting data from system,<br><br>this is an example of a task that can be automated.
 							</p>
-							<a href="Projects" class="btn btn-sm btn-dark" style="color: orange;">Read more</a>
+							<a href="" class="btn btn-sm btn-dark" style="color: orange;">Read more</a>
 						</div>
 						<div class="col-sm-4 mt-4 text-center">
 							<p class="text-white h6">Development</p>
@@ -236,7 +224,7 @@ $(function() {
 								I have high passion for development and regulary finding new ways of working.<br><br>
 								There might be something that has always be done in the same way,<br><br> what if I told you there could probably be a more effective way?
 							</p>
-							<a href="Projects" class="btn btn-sm btn-dark" style="color: orange;">Read more</a>
+							<a href="" class="btn btn-sm btn-dark" style="color: orange;">Read more</a>
 						</div>
 						<div class="col-sm-4 mt-4 text-center">
 							<p class="text-white h6">Purchasing and logistic</p>
@@ -245,7 +233,7 @@ $(function() {
 							I have many years of expirience in logistic and purchasing.<br><br> I strive to find most cost effective desitions and I find it super intresting area because you can have a big impact on the final result in many ways.<br>
 							Please feel easy to contact me if there could be some tasks where I could be of help.
 							</p>
-							<a href="Projects" class="btn btn-sm btn-dark" style="color: orange;">Read more</a>
+							<a href="" class="btn btn-sm btn-dark" style="color: orange;">Read more</a>
 						</div>
 					</div>
 
