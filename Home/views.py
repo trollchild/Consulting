@@ -1,6 +1,11 @@
+
 from django.shortcuts import render, redirect, reverse
-import logging #this will be deleted when we fix all debugs (on debug = false)
-from django.http import HttpResponse, Http404, JsonResponse
+from django.core.mail import send_mail
+
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse
+from django.conf import settings
+
 
 def Page(request):
     context = {}

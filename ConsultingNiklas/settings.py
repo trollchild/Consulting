@@ -74,7 +74,7 @@ ROOT_URLCONF = 'ConsultingNiklas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'Home/Templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
