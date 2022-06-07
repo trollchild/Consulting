@@ -44,6 +44,7 @@ ALLOWED_HOSTS = ["npetters.herokuapp.com","127.0.0.1"]
 # this is for the wsgi that host the Heroku
 WSGI_APPLICATION = 'Consulting.wsgi.application'
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Application definition
 
@@ -65,6 +66,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'ConsultingNiklas.urls'
@@ -137,8 +139,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATICS = "/Home/static/"
+STATIC_ROOT = os.path.join(STATICS, 'staticfiles')
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'reactapp/build/static/'),]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_URL = '/media/'
+
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
