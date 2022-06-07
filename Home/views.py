@@ -9,7 +9,7 @@ def Page(request):
 def Projects(request):
     Project = "project"
     context = {'Projects':Projects}
-    return render(request, 'Projects.Test.html', context)
+    return render(request, 'Projects.html', context)
 
 
 # Create your views here.
