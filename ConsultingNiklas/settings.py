@@ -14,6 +14,18 @@ from pathlib import Path
 
 import os
 
+
+# Access hidden variables from Heroku
+from boto.s3.connection import S3Connection
+import django_heroku
+
+import environ
+
+from dotenv import load_dotenv   #for python-dotenv method
+load_dotenv()
+
+env = environ.Env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,7 +39,10 @@ SECRET_KEY = 'w0key@qok6o5ca9h85&%q2k1&1ux65$hwh8$@#f7^xmu&n+c7('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["npetters.herokuapp.com/"]
+
+# this is for the wsgi that host the Heroku
+WSGI_APPLICATION = 'Consulting.wsgi.application'
 
 
 # Application definition
