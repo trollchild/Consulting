@@ -39,7 +39,7 @@ SECRET_KEY = 'w0key@qok6o5ca9h85&%q2k1&1ux65$hwh8$@#f7^xmu&n+c7('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["npetters.herokuapp.com/"]
+ALLOWED_HOSTS = ["npetters.herokuapp.com","127.0.0.1"]
 
 # this is for the wsgi that host the Heroku
 WSGI_APPLICATION = 'Consulting.wsgi.application'
