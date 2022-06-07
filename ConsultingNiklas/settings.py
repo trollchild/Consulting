@@ -42,7 +42,7 @@ DEBUG = True
 ALLOWED_HOSTS = ["npetters.herokuapp.com","127.0.0.1"]
 
 # this is for the wsgi that host the Heroku
-WSGI_APPLICATION = 'Consulting.wsgi.application'
+WSGI_APPLICATION = 'npetters.wsgi.application'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
@@ -87,7 +87,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'ConsultingNiklas.wsgi.application'
 
 
 # Database
