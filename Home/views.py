@@ -4,12 +4,12 @@ from django.http import HttpResponse, Http404, JsonResponse
 
 def Page(request):
     context = {}
-    return render(request, 'Test.HTML', context)
+    return render(request, 'Test.html', context)
 
 def Projects(request):
     Project = "project"
     context = {'Projects':Projects}
-    return render(request, 'Projects.HTML', context)
+    return render(request, 'Projects.Test.html', context)
 
 
 # Create your views here.
