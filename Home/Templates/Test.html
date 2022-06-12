@@ -127,7 +127,7 @@
 							Projects
 						</a>
 
-							<div class="col-md-3 mt-4" id="otayhteyttabutton">
+							<div class="col-md-3 mt-4 otayhteyttabutton" >
 							Contact
 							</div>
 
@@ -172,14 +172,16 @@ $(function() {
 				<div class="col-sm-5 p-3 mt-1 text-center h6" id="firsttext">
 					<p class="h6 text-white">
 					I have passion for development and new ways of working<br><br>I am offering help in automations, development projects, web-sites, procurement. You can find my contact details from contact section.<br><br>
-					Currently I am working with a spot-buy market.<br>
+					<button class="btn btn-sm border broder-white bg-dark otayhteyttabutton" style="color: orange; font-size: 10px;" ><b>Quotation</b></button><br><br>
 				</p>
 					<br>
+					<div class="col-sm-12 mt-2">
 				You need to aim beyond what you are capable of.<br>
 				<br>You must develop a complete disregard for where your abilities end.<br>
 				<br>Try to do things that you're incapable of... If you think you're incapable of running a company, make that your aim...
 				<br>Make your vision of where you want to be a reality.
 				<p class="text-white mt-4">Nothing is impossible.</p>
+			</div>
 			</div>
 
 			<div class="col-sm-6 text-white">
@@ -602,7 +604,7 @@ window.onclick = function(event) {
 	}
 }
 
-$('#otayhteyttabutton').click(function () {
+$('.otayhteyttabutton').click(function () {
     $('.overlay').show();
 })
 $('.close').click(function () {
