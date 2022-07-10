@@ -16,5 +16,15 @@ def Projects(request):
     context = {'Projects':Projects}
     return render(request, 'Projects.html', context)
 
+def Finnish(request):
+    Finnish = "Finnish"
+    context = {'Finnish':Finnish}
+    return render(request, 'Test.html', context)
+
+def Projektit(request):
+    Finnish = "Finnish"
+    context = {'Finnish':Finnish}
+    return render(request, 'Projects.html', context)
+
 
 # Create your views here.

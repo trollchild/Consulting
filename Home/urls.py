@@ -24,5 +24,6 @@ from Home import views
 urlpatterns = [
     path('', views.Page, name='Page'),
     path('Projects', views.Projects, name='Projects'),
-
+    path('Finnish', views.Finnish, name='Finnish'),
+    path('Projektit', views.Projektit, name='Projektit'),
     ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

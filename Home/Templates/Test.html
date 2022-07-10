@@ -32,19 +32,39 @@
 <body id="desktop">
 				<div class="col-md-12" >
 					<div class="overlay" >
-	<div class='popup text-white h-2'>
-			<div class='close'>&#10006;</div><!-- close button-->
-			 <h2>Contact details</h2> <!-- title food the popup-->
-			<!-- popup content goes here -->
-			<div class="col-sm-12 mt-4 text-center">
-			<div class="col-sm-12 mt-1">Niklas Pettersson</div>
-			<div class="col-sm-12 mt-1" style="color:#18e591;">Phone; </div>
-			<div class="col-sm-12">+358503087183</div>
-			<div class="col-sm-12 mt-2" style="color:#18e591;">E-mail;</div>
-			<div class="col-sm-12">niklas.pettersson@npetters.com</div>
+						{% if Finnish %}
 
-			</div>
-	</div>
+						<div class='popup text-white h-2'>
+								<div class='close'>&#10006;</div><!-- close button-->
+								 <h2>Yhteystiedot</h2> <!-- title food the popup-->
+								<!-- popup content goes here -->
+								<div class="col-sm-12 mt-4 text-center">
+								<div class="col-sm-12 mt-1">Niklas Pettersson</div>
+								<div class="col-sm-12 mt-1" style="color:#18e591;">Puhelinnumero; </div>
+								<div class="col-sm-12">+358503087183</div>
+								<div class="col-sm-12 mt-2" style="color:#18e591;">Sähköposti;</div>
+								<div class="col-sm-12">niclas.pettersson@hotmail.com</div>
+
+								</div>
+						</div>
+
+						{% else %}
+
+						<div class='popup text-white h-2'>
+								<div class='close'>&#10006;</div><!-- close button-->
+								 <h2>Contact details</h2> <!-- title food the popup-->
+								<!-- popup content goes here -->
+								<div class="col-sm-12 mt-4 text-center">
+								<div class="col-sm-12 mt-1">Niklas Pettersson</div>
+								<div class="col-sm-12 mt-1" style="color:#18e591;">Phone; </div>
+								<div class="col-sm-12">+358503087183</div>
+								<div class="col-sm-12 mt-2" style="color:#18e591;">E-mail;</div>
+								<div class="col-sm-12">niclas.pettersson@hotmail.com</div>
+
+								</div>
+						</div>
+						{% endif %}
+
 
 </div>
 					<div class="row">
@@ -55,7 +75,16 @@
 
 						<div class="col-md-6 mt-5 mh-100" >
 							<div class="col-sm-4">
+								{% if Finnish %}
+
+							<H5 class="text-white">Konsultointi</H5>
+
+								{% else %}
+
 							<H5 class="text-white">Consulting</H5>
+
+								{% endif %}
+
 
 							<H2 class="text-white"><b>Niklas Pettersson</b></H2>
 						</div>
@@ -119,27 +148,67 @@
 
 						<div class="col-md-4 mt-4 mh-100">
 							<div class="row h4 text-white">
-							<a href="/"class="col-md-3 mt-4" id="about">
-							About
-						</a>
 
-							<a href="Projects" class="text-white col-md-3 mt-4 ">
-							Projects
+								{% if Finnish %}
+
+								<a href="Finnish"class="col-md-3 mt-4" id="about">
+								Etusivu
+								</a>
+
+
+								{% else %}
+							<a href="/"class="col-md-3 mt-4" id="about">
+								Main
+							</a>
+								{% endif %}
+
+
+
+
+								{% if Finnish %}
+							<a href="Projektit" class="text-white col-md-3 mt-4 ">
+								Projektit
 						</a>
+								{% else %}
+							<a href="Projects" class="text-white col-md-3 mt-4 ">
+								Projects
+							</a>
+
+								{% endif %}
+
+
 
 							<div class="col-md-3 mt-4 otayhteyttabutton" >
-							Contact
+
+								{% if Finnish %}
+
+								Yhteystiedot
+
+								{% else %}
+
+								Contact
+
+								{% endif %}
+
 							</div>
 
 							<div class="col-md-3">
 								<div class="dropdown">
 			          <button onclick="myFunction()" class="dropbtn btn text-center mt-4" style="border-left: 5px solid black;">
+									{% if Finnish %}
+
+									Suomi
+
+									{% else %}
+
 									English
+
+									{% endif %}
 			          </button>
 			            <div id="myDropdown" class="dropdown-content">
 			                <a href="/" style="border-left: 5px solid green;">English</a>
-			                <a href="/" style="border-left: 5px solid green;">Suomi</a>
-			                <a href="/" style="border-left: 5px solid green;">Svenska</a>
+			                <a href="Finnish" style="border-left: 5px solid green;">Suomi</a>
+			                <!--<a href="/" style="border-left: 5px solid green;">Svenska</a> -->
 			            </div>
 			          </div>
 							</div>
@@ -171,16 +240,51 @@ $(function() {
 
 				<div class="col-sm-5 p-3 mt-1 text-center h6" id="firsttext">
 					<p class="h6 text-white">
-					I have passion for development and new ways of working<br><br>I am offering help in automations, development projects, web-sites, procurement. You can find my contact details from contact section.<br><br>
-					<button class="btn btn-sm border broder-white bg-dark otayhteyttabutton" style="color: orange; font-size: 10px;" ><b>Quotation</b></button><br><br>
+						{% if Finnish %}
+
+						Minulla löytyy intohimoa töyskennellä eri kehitysprojektejen parissa. Suhtaudun innolla uusiin haasteisiin ja lähden ilolla kokeilemaan uusia tapoja toimia.<br><br>
+						Tarjoan palveluja automaatoihin, kehitysprojekteihin, nettisivujen tekemiseen, hankintaan. Yhteystietoni löydät yhteystiedot osiosta, minut tavoittaa puhelimitse ja sähköpostitse arkena ja viikonloppuna.<br><br>
+
+						{% else %}
+
+						I have passion for development and new ways of working<br><br>I am offering help in automations, development projects, web-sites, procurement. You can find my contact details from contact section, you can contact me with phone or e-mail on weekdays and weekends.<br><br>
+
+						{% endif %}
+
+						{% if Finnish %}
+
+
+											<button class="btn btn-sm border broder-white bg-dark otayhteyttabutton" style="color: orange; font-size: 10px;" ><b>Tarjouskysely</b></button><br><br>
+
+						{% else %}
+
+
+											<button class="btn btn-sm border broder-white bg-dark otayhteyttabutton" style="color: orange; font-size: 10px;" ><b>Quotation</b></button><br><br>
+
+						{% endif %}
+
 				</p>
 					<br>
 					<div class="col-sm-12 mt-2">
-				You need to aim beyond what you are capable of.<br>
-				<br>You must develop a complete disregard for where your abilities end.<br>
-				<br>Try to do things that you're incapable of... If you think you're incapable of running a company, make that your aim...
-				<br>Make your vision of where you want to be a reality.
-				<p class="text-white mt-4">Nothing is impossible.</p>
+						{% if Finnish %}
+
+						You need to aim beyond what you are capable of.<br>
+						<br>You must develop a complete disregard for where your abilities end.<br>
+						<br>Try to do things that you're incapable of... If you think you're incapable of running a company, make that your aim...
+						<br>Make your vision of where you want to be a reality.
+						<p class="text-white mt-4">Mikään ei ole mahdotonta</p>
+
+						{% else %}
+
+						You need to aim beyond what you are capable of.<br>
+						<br>You must develop a complete disregard for where your abilities end.<br>
+						<br>Try to do things that you're incapable of... If you think you're incapable of running a company, make that your aim...
+						<br>Make your vision of where you want to be a reality.
+						<p class="text-white mt-4">Nothing is impossible.</p>
+
+						{% endif %}
+
+
 			</div>
 			</div>
 
@@ -189,7 +293,30 @@ $(function() {
 					<div class="col-sm-1">
 					</div>
 				<div class="col-sm-4 h6 contactcard text-center p-3">
-					<p class="text-center mt-2 h5">Skills</p><br>
+					<p class="text-center mt-2 h5">
+						{% if Finnish %}
+
+						Taidot
+
+						{% else %}
+
+						Skills
+
+						{% endif %}
+
+
+					</p><br>
+
+					{% if Finnish %}
+
+					¤ Python, Django<br><br>
+					¤ HTML, CSS, Javascript, Bootstrap<br><br>
+					¤ Visual basic<br><br>
+					¤ Hankinta<br><br>
+					¤ Tiimityöskentely<br><br>
+					¤ Johtajuus<br><br>
+
+					{% else %}
 
 					¤ Python, Django<br><br>
 					¤ HTML, CSS, Javascript, Bootstrap<br><br>
@@ -197,8 +324,24 @@ $(function() {
 					¤ Procurement<br><br>
 					¤ Team work<br><br>
 					¤ Leadership<br><br>
+
+					{% endif %}
+
+
 					<div class="col-sm-12 mt-4">
-						<a class="btn btn-dark btn-big">Contact</a>
+						<a class="btn btn-dark btn-big">
+							{% if Finnish %}
+
+							Ota yhteyttä
+
+							{% else %}
+
+							Contact
+
+							{% endif %}
+
+
+						</a>
 
 					</div>
 				</div>
@@ -221,41 +364,89 @@ $(function() {
 
 <footer class="mt-6">
 
-				<div class="col-sm-12 mt-6" id="footer">
+	{% if Finnish %}
 
-					<div class="row" >
-						<div class="col-sm-4 mt-4 text-center">
-							<p class="text-white h6">Automations and programming</p>
-							<p class="test mt-4">
-								Nowadays a lot of the work that is done manually can be automated.<br>
-								People spend several hours a day in collecting data from system,<br>this is an example of a task that can be automated.
-							</p>
-							<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Read more</a>
-						</div>
-						<div class="col-sm-4 mt-4 text-center">
-							<p class="text-white h6">Development</p>
-							<p class="test mt-4">
-								I have high passion for development and regulary finding new ways of working.<br>
-								There might be something that has always be done in the same way,<br> what if I told you there could probably be a more effective way?
-							</p>
-							<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Read more</a>
-						</div>
-						<div class="col-sm-4 mt-4 text-center">
-							<p class="text-white h6">Purchasing and logistic</p>
-							<p class="test mt-4">
-							For my main work I work as a material management team leader.<br>
-							I have many years of expirience in logistic and purchasing.<br> I strive to find most cost effective desitions and I find it super intresting area because you can have a big impact on the final result in many ways.<br>
-							Please feel easy to contact me if there could be some tasks where I could be of help.
-							</p>
-							<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Read more</a>
-						</div>
-					</div>
 
-					<div class="col-sm-12 text-center mt-4" style="font-size: 12px;" id="contact">
-						Contact information: Niklas Pettersson , Phone +358503087183, E-mail: niklas.pettersson@npetters.com , Finland<br>
-						© Npetters 2022
-					</div>
+	<div class="col-sm-12 mt-6" id="footer">
+
+		<div class="row" >
+			<div class="col-sm-4 mt-4 text-center">
+				<p class="text-white h6">Automaatiot ja ohjelmointi</p>
+				<p class="test mt-4">
+					Paljon asioita joita tehdään tällä hetkellä manuaaliesti on mahdollista automatisoida.<br>
+					Ihmiset käyttävät työpäivän aikana lukuisia tunteja hakien tietoa tietokannsasta,<br>tämä on esimerkiksi yksi alue joka on mahdollista automatisoida.
+				</p>
+				<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Lue Lisää</a>
 			</div>
+			<div class="col-sm-4 mt-4 text-center">
+				<p class="text-white h6">Kehitysprojektit</p>
+				<p class="test mt-4">
+					Minullta löytyy korkea intohimo eri kehitysprojekteille ja etsin jatkuvasti uusia työskentelytapoja.<br>
+					Saattaa löytyy asioita joita on aina tehty samalla tavalla ja todetty toimivaksi ratkaisuksi,<br> mitä jos kertoisin että asia on mahdollista tehdä kustannustehokkaammin?
+				</p>
+				<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Lue Lisää</a>
+			</div>
+			<div class="col-sm-4 mt-4 text-center">
+				<p class="text-white h6">Hankinta ja logistiikkac</p>
+				<p class="test mt-4">
+				Työskentelen kansainvälisessä yrityksessä hankintatiimin vetäjänä.<br>
+				Minulla löytyy monta vuotta työkokemusta hankinnan ja logistiikan tehtävistä.<br>
+				Pyrin jatkuvasti löytämään kustannustehokkaimmat ratkaisut, hankintatehtävät ovat mielestäni mielenkiintoisia koska pystyt vaikuttamaan lopputulokseen monella eri tavalla.<br>
+				Olettehan rohkeasti yhteydessä jos uskotte, että on jokin asia jossa voisin olla avuksi.
+				</p>
+				<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Lue lisää</a>
+			</div>
+		</div>
+
+		<div class="col-sm-12 text-center mt-4" style="font-size: 12px;" id="contact">
+			Yhteystiedot: Niklas Pettersson , Phone +358503087183, E-mail: niclas.pettersson@hotmail.com , Finland, Y-tunnus 2899805-2<br>
+			© Npetters 2022
+		</div>
+</div>
+
+	{% else %}
+
+
+	<div class="col-sm-12 mt-6" id="footer">
+
+		<div class="row" >
+			<div class="col-sm-4 mt-4 text-center">
+				<p class="text-white h6">Automations and programming</p>
+				<p class="test mt-4">
+					Nowadays a lot of the work that is done manually can be automated.<br>
+					People spend several hours a day in collecting data from system,<br>this is an example of a task that can be automated.
+				</p>
+				<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Read more</a>
+			</div>
+			<div class="col-sm-4 mt-4 text-center">
+				<p class="text-white h6">Development</p>
+				<p class="test mt-4">
+					I have high passion for development and regulary finding new ways of working.<br>
+					There might be something that has always be done in the same way,<br> what if I told you there could probably be a more effective way?
+				</p>
+				<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Read more</a>
+			</div>
+			<div class="col-sm-4 mt-4 text-center">
+				<p class="text-white h6">Purchasing and logistic</p>
+				<p class="test mt-4">
+				For my main work I work as a material management team leader.<br>
+				I have many years of expirience in logistic and purchasing.<br> I strive to find most costeffective desitions and I find it super interesting area because you can have a big impact on the final result in many ways.<br>
+				Please feel easy to contact me if there could be some tasks where I could be of help.
+				</p>
+				<a href="Projects" class="btn btn-sm btn-dark" style="color: orange; font-size: 10px;">Read more</a>
+			</div>
+		</div>
+
+		<div class="col-sm-12 text-center mt-4" style="font-size: 12px;" id="contact">
+			Contact information: Niklas Pettersson , Phone +358503087183, E-mail: niclas.pettersson@hotmail.com , Finland, y-identifier 2899805-2<br>
+			© Npetters 2022
+		</div>
+</div>
+
+	{% endif %}
+
+
+
 		</footer>
 
 </body>
